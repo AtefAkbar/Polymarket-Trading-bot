@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Fredoka';font-weight:400;src:url('../node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('../node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('../node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2');}
+html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}
+</style></head><body>
+<canvas id="cv" width="1920" height="1080"></canvas>
+<script src="util.js"></script>
+<script src="chars.js"></script>
+<script src="env.js"></script>
+<script src="scenes_a.js"></script>
+<script src="scenes_b.js"></script>
+<script src="engine.js"></script>
+<script>
+window.ready = (async () => { await Promise.all(['400','600','700'].map(w => document.fonts.load(w + ' 40px Fredoka'))); return true; })();
+</script>
+</body></html>

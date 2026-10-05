@@ -1,0 +1,7 @@
+build/
+models/
+node_modules/
+tests/
+*.mp4
+*.wav
+__pycache__/
